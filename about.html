@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>About Us | Studio91</title>
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ChromaCard — cursor-following spotlight over the Founder & Studio images */
+        .chroma-card-root {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/5;
+            --x: 50%;
+            --y: 50%;
+            --r: 320px;
+            --card-border: #B89B5E;
+            --card-gradient: linear-gradient(145deg, #B89B5E, #0F0C0A);
+        }
+
+        .chroma-card {
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 2px solid var(--card-border);
+            background: var(--card-gradient);
+            box-sizing: border-box;
+        }
+
+        .chroma-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.25), transparent 40%);
+            z-index: 3;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .chroma-card-root:hover .chroma-card::before {
+            opacity: 1;
+        }
+
+        .chroma-img-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            filter: grayscale(100%);
+        }
+
+        .chroma-img-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .chroma-img-wrapper {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: transparent;
+            overflow: hidden;
+            -webkit-mask-image: radial-gradient(circle at var(--x) var(--y), black 0%, transparent var(--r));
+            mask-image: radial-gradient(circle at var(--x) var(--y), black 0%, transparent var(--r));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .chroma-card-root:hover .chroma-img-wrapper {
+            opacity: 1;
+        }
+
+        .chroma-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .chroma-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: radial-gradient(circle at var(--x) var(--y), var(--card-border), transparent var(--r));
+            opacity: 0;
+            mix-blend-mode: color-dodge;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .chroma-card-root:hover .chroma-overlay {
+            opacity: 0.5;
+        }
+
+        .chroma-fade {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="nav-large">
+
+    <nav class="navbar">
+        <a href="home.html" class="logo">STUDIO91</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="portfolio.html">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="portfolio-photography.html">Photography</a></li>
+                    <li><a href="portfolio-films.html">Films</a></li>
+                    <li><a href="portfolio-justus.html">Just Us</a></li>
+                </ul>
+            </li>
+            <li><a href="captured-stories.html">Captured Stories</a></li>
+            <li><a href="plans.html">Plans & Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero"
+        style="background-image: url('https://placehold.co/1920x1080/D4C5B2/ffffff?text=About+Us+Hero+Photo&font=Playfair+Display'); padding: 0;">
+        <h1>About Us</h1>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section-bg-white text-center">
+        <div class="container animate-on-scroll">
+            <h2 class="intro-main-title" style="font-size: clamp(1.8rem, 3vw, 2.8rem); white-space: normal;">Turning
+                Beautiful Moments Into Timeless Memories</h2>
+            <p class="intro-text">
+                At Studio91, we believe weddings are not just events — they are emotional stories filled with love,
+                family, traditions, and unforgettable memories.
+            </p>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section-bg-light">
+        <div class="container">
+            <div class="about-grid">
+                <div class="animate-on-scroll">
+                    <div class="chroma-card-root"
+                        style="--card-border:#B89B5E; --card-gradient:linear-gradient(145deg, #B89B5E, #0F0C0A); --r:320px;">
+                        <article class="chroma-card">
+                            <div class="chroma-img-bg">
+                                <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=Founder+Photo&font=Playfair+Display" alt="Founder" loading="lazy">
+                            </div>
+                            <div class="chroma-img-wrapper">
+                                <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=Founder+Photo&font=Playfair+Display"
+                                    alt="Founder" loading="lazy">
+                            </div>
+                        </article>
+                        <div class="chroma-overlay"></div>
+                        <div class="chroma-fade"></div>
+                    </div>
+                    <p
+                        style="text-align: center; margin-top: 1.5rem; font-family: var(--font-alt); font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase; color: var(--color-text-main); font-weight: 500;">
+                        Dhruv Joshi</p>
+                </div>
+                <div class="animate-on-scroll">
+                    <h2>The Founder</h2>
+                    <p>Founded by photographer and filmmaker <strong>Dhruv Joshi</strong>, STUDIO-91 Productions has
+                        collaborated with leading organisations including Adani Enterprises, Godrej, Asian Paints,
+                        Machinecraft Technologies, and Marwadi Financial Services. Our experience spans boardrooms,
+                        manufacturing facilities, luxury venues, and destination celebrations capturing stories that
+                        elevate brands and preserve meaningful moments.</p>
+                    <p>We believe that powerful visuals are more than photographs; they are a reflection of identity,
+                        craftsmanship, and ambition. By combining creative vision with technical precision, we create
+                        imagery that inspires trust, enhances brand perception, and leaves a lasting impression.</p>
+                    <p>From executive portraits and corporate campaigns to luxury weddings and cinematic brand films,
+                        our work is guided by a singular philosophy: to create timeless visual experiences that resonate
+                        beyond the moment.</p>
+                    <p>At STUDIO-91 Productions, we do not simply document events we craft visual legacies.</p>
+                    <p style="font-style: italic; font-weight: 500; color: var(--color-text-main); margin-top: 2rem;">
+                        Elevating Brands. Capturing Excellence. Creating Timeless Stories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Studio Section -->
+    <style>
+        .studio-text-section {
+            padding: 6rem 0;
+        }
+        .studio-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            text-align: left;
+            position: relative;
+        }
+        @media (min-width: 900px) {
+            .studio-columns {
+                grid-template-columns: 1fr 1fr;
+                gap: 6rem;
+            }
+            .studio-columns::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 1px;
+                height: 80%;
+                background-color: var(--card-border);
+                opacity: 0.4;
+            }
+        }
+        .studio-column-heading {
+            font-family: var(--font-alt);
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--card-border, #B89B5E);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .studio-column-heading::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--card-border, #B89B5E);
+        }
+        .studio-lead-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--color-text-main);
+            font-weight: 400;
+        }
+        .studio-body-text {
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-top: 1.5rem;
+            color: #666;
+        }
+    </style>
+    <section class="section-bg-white text-center studio-text-section">
+        <div class="container animate-on-scroll" style="max-width: 1100px; margin: 0 auto;">
+            <h2 style="margin-bottom: 4rem; font-size: clamp(2.5rem, 5vw, 3.5rem);">The Studio</h2>
+            <div class="studio-columns">
+                <div>
+                    <h3 class="studio-column-heading">The Brand</h3>
+                    <p class="studio-lead-text"><strong>STUDIO-91 Productions</strong> is a premium visual storytelling studio dedicated to creating exceptional photography and cinematic films for brands, businesses, and discerning clients worldwide.</p>
+                    <p class="studio-body-text">We specialize in corporate, commercial, industrial, luxury wedding, hospitality, and lifestyle photography, delivering imagery that is both visually compelling and strategically impactful. Every project is approached with a meticulous attention to detail, a deep understanding of aesthetics, and an unwavering commitment to excellence.</p>
+                </div>
+                <div>
+                    <h3 class="studio-column-heading">The Weddings</h3>
+                    <p class="studio-lead-text">At <strong>STUDIO-91</strong>, we believe every wedding is a unique story waiting to be told. With over 10 years of experience and 200+ successful shoots, we specialize in capturing genuine emotions.</p>
+                    <p class="studio-body-text">Our approach blends creativity, storytelling, and attention to detail to create photographs and films that couples can cherish for a lifetime. From intimate celebrations to grand destination weddings, we are passionate about preserving your most beautiful moments with elegance and authenticity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories of Love Section (Manual Split Layout) -->
+    <style>
+        .stories-slider-container {
+            background-color: #f4f3f1;
+            position: relative;
+            overflow: hidden;
+            height: 80vh;
+            min-height: 600px;
+            margin-top: 5rem;
+        }
+
+        .story-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .story-slide.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .story-text-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            text-align: center;
+            background-color: #f4f3f1;
+        }
+
+        .story-img-side {
+            flex: 1;
+        }
+
+        .story-img-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-controls {
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            z-index: 10;
+        }
+
+        .story-controls button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #888;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .story-controls button:hover {
+            color: var(--color-text-main);
+        }
+
+        .story-controls span {
+            font-family: var(--font-alt);
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            color: #666;
+        }
+
+        .story-note-title {
+            font-family: var(--font-alt);
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 2.5rem;
+        }
+
+        .story-couple-name {
+            font-family: var(--font-main);
+            font-size: 2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-text-main);
+            margin-bottom: 2.5rem;
+        }
+
+        .story-quote {
+            font-family: var(--font-main);
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--color-text-main);
+            max-width: 550px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .story-slide {
+                flex-direction: column-reverse;
+            }
+
+            .story-text-side,
+            .story-img-side {
+                flex: none;
+                height: 50%;
+            }
+
+            .story-text-side {
+                padding: 2rem;
+            }
+
+            .story-controls {
+                width: 100%;
+                bottom: 1rem;
+            }
+        }
+    </style>
+
+    <section class="stories-slider-container" id="stories-slider-container">
+
+        <!-- Slide 1 -->
+        <div class="story-slide active">
+            <div class="story-text-side">
+                <span class="story-note-title">Stories of Love</span>
+                <h3 class="story-couple-name">Krishma & Dhiraj</h3>
+                <p class="story-quote">
+                    "These guys have been booked with us since 2019, when our wedding was going to be in Vietnam. They
+                    stood by us and made sure their entire team could attend our wedding... Truly we didn't want to get
+                    married without them and it was the best decision. Their work is outstanding."
+                </p>
+            </div>
+            <div class="story-img-side">
+                <img src="images/hero/hero-01.jpg" alt="Krishma & Dhiraj" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="story-slide">
+            <div class="story-text-side">
+                <span class="story-note-title">Stories of Love</span>
+                <h3 class="story-couple-name">Sarah & Michael</h3>
+                <p class="story-quote">
+                    "An intimate coastal ceremony where the ocean witnessed our vows. The team captured the sea breeze
+                    and the quiet moments perfectly. We couldn't be happier with our album."
+                </p>
+            </div>
+            <div class="story-img-side">
+                <img src="images/hero/hero-02.jpg" alt="Sarah & Michael" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="story-slide">
+            <div class="story-text-side">
+                <span class="story-note-title">Stories of Love</span>
+                <h3 class="story-couple-name">Chloe & David</h3>
+                <p class="story-quote">
+                    "A timeless celebration in the heart of a historic city. They guided us so effortlessly throughout
+                    the day and the final gallery looks like something out of a luxury magazine."
+                </p>
+            </div>
+            <div class="story-img-side">
+                <img src="images/hero/hero-03.jpg" alt="Chloe & David" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="story-slide">
+            <div class="story-text-side">
+                <span class="story-note-title">Stories of Love</span>
+                <h3 class="story-couple-name">Olivia & Ethan</h3>
+                <p class="story-quote">
+                    "Soft natural moments, cinematic portraits, and a celebration surrounded by family made this wedding
+                    feel warm, elegant, and deeply personal."
+                </p>
+            </div>
+            <div class="story-img-side">
+                <img src="images/hero/hero-04.jpg" alt="Olivia & Ethan" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="story-slide">
+            <div class="story-text-side">
+                <span class="story-note-title">Stories of Love</span>
+                <h3 class="story-couple-name">Isabella & Noah</h3>
+                <p class="story-quote">
+                    "An unforgettable destination wedding with breathtaking scenery, emotional moments, and a gallery
+                    that perfectly reflects their love story."
+                </p>
+            </div>
+            <div class="story-img-side">
+                <img src="images/hero/hero-05.jpg" alt="Isabella & Noah" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Global Controls -->
+        <div class="story-controls">
+            <button id="story-prev"><i class="fas fa-long-arrow-alt-left"></i></button>
+            <span id="story-counter">01 / 05</span>
+            <button id="story-next"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+
+    </section>
+
+
+
+    <!-- Script for Manual Slider -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const storySlides = document.querySelectorAll('.story-slide');
+            const btnPrev = document.getElementById('story-prev');
+            const btnNext = document.getElementById('story-next');
+            const counter = document.getElementById('story-counter');
+
+            if (storySlides.length > 0 && btnPrev && btnNext) {
+                let currIndex = 0;
+
+                const updateSlider = () => {
+                    storySlides.forEach((slide, idx) => {
+                        if (idx === currIndex) {
+                            slide.classList.add('active');
+                        } else {
+                            slide.classList.remove('active');
+                        }
+                    });
+                    counter.innerText = `0${currIndex + 1} / 0${storySlides.length}`;
+                };
+
+                btnNext.addEventListener('click', () => {
+                    currIndex = (currIndex + 1) % storySlides.length;
+                    updateSlider();
+                });
+
+                btnPrev.addEventListener('click', () => {
+                    currIndex = (currIndex - 1 + storySlides.length) % storySlides.length;
+                    updateSlider();
+                });
+            }
+        });
+    </script>
+
+    <footer>
+        <a href="home.html" class="logo"
+            style="color: var(--color-text-main); font-size: 1.5rem; margin-bottom: 1rem; display: inline-block;">STUDIO91</a>
+        <p class="footer-description">
+            Studio91 is a premium wedding photography and cinematic filmmaking brand dedicated to capturing timeless
+            love stories with elegance, emotion, and creativity. From intimate ceremonies to grand destination weddings,
+            we transform beautiful moments into unforgettable memories that last forever.
+        </p>
+        <div class="footer-socials" style="margin-bottom: 1.5rem;">
+            <a href="https://www.instagram.com/studio91_djoshi/" target="_blank"
+                style="font-size: 1.5rem; color: var(--color-text-main); margin: 0 10px; transition: var(--transition-smooth);"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Studio91. All Rights Reserved.</p>
+    </footer>
+
+    <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <!-- 3D Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/content-data.js"></script>
+    <script src="js/images-data.js"></script>
+    <script src="js/videos-data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

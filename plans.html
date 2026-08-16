@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Plans & Pricing | Studio91</title>
+    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: var(--color-white);
+            color: var(--color-text-main);
+        }
+
+
+        .plans-hero {
+            padding: 10rem 5% 4rem;
+            text-align: center;
+            background: var(--color-white);
+        }
+
+        .plans-hero h1 {
+            color: var(--color-text-main);
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            margin-bottom: 1rem;
+            letter-spacing: 4px;
+        }
+
+        .plans-hero p {
+            color: var(--color-text-light);
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .packages-container {
+            max-width: 1640px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+        }
+
+        .package-card {
+            position: relative;
+            isolation: isolate;
+            box-sizing: border-box;
+            padding: 2px;                 /* becomes the glowing border ring */
+            border-radius: 20px;
+            overflow: hidden;
+            /* Espresso (#2E211B) ring, faintly visible at rest */
+            background: rgba(46, 33, 27, 0.15);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Spotlight layer — sits behind the inner content, only peeks through the border ring */
+        .package-card-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: radial-gradient(ellipse 75% 75% at 50% 50%, rgba(46, 33, 27, 0), transparent 85%);
+            transition: background 120ms ease-out;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Inner content — covers everything except the thin border ring above */
+        .package-card-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;                /* fill the stretched grid cell */
+            border-radius: 18px;         /* card radius - border width */
+            overflow: hidden;
+            background: var(--color-white);
+            padding: 2.75rem 2.75rem 3.25rem;   /* breathing room inside the card */
+        }
+
+        .package-img-wrapper {
+            width: 100%;
+            aspect-ratio: 3/2;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border: 1px solid var(--color-bg-light);
+        }
+
+        .package-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .package-card:hover .package-img {
+            transform: scale(1.05);
+        }
+
+        .package-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.25rem;
+            border-bottom: 1px solid var(--color-bg-light);
+            padding-bottom: 1.25rem;
+        }
+
+        .package-title {
+            font-family: var(--font-main);
+            color: var(--color-text-main);
+            font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+            letter-spacing: 1px;
+            margin: 0;
+            text-transform: none;
+        }
+
+        .package-price {
+            text-align: right;
+            color: var(--color-text-main);
+        }
+
+        .price-amount {
+            font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+            display: block;
+            font-weight: 500;
+        }
+
+        .price-sub {
+            font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+            color: var(--color-text-light);
+        }
+
+        .package-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2.25rem 0;
+        }
+
+        .package-list li {
+            font-family: var(--font-main);
+            font-size: clamp(1.2rem, 1.45vw, 1.45rem);
+            font-style: italic;
+            color: var(--color-text-main);
+            margin-bottom: 0.7rem;
+            line-height: 1.45;
+            overflow-wrap: break-word;
+        }
+
+        .section-label {
+            font-family: var(--font-alt);
+            font-size: clamp(1.2rem, 1.45vw, 1.45rem);
+            color: var(--color-text-main);
+            margin: 2rem 0 1.75rem;
+            margin-top: auto;            /* push deliverables block to the bottom so cards align */
+            display: block;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .deliverables-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2.25rem 0;
+        }
+
+        .deliverables-list li {
+            font-family: var(--font-main);
+            font-size: clamp(1.2rem, 1.45vw, 1.45rem);
+            font-style: italic;
+            color: var(--color-text-light);
+            margin-bottom: 0.5rem;
+            overflow-wrap: break-word;
+        }
+
+        .video-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .video-list li {
+            font-family: var(--font-main);
+            font-size: clamp(1.2rem, 1.45vw, 1.45rem);
+            font-style: italic;
+            color: var(--color-text-light);
+            margin-bottom: 0.4rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .video-list li::before {
+            content: '-';
+            position: absolute;
+            left: 0;
+        }
+
+        .maternity-container {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 950px;
+        }
+
+        @media (max-width: 1024px) {
+            .packages-container {
+                grid-template-columns: 1fr;
+                gap: 6rem;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .package-card-inner {
+                padding: 1.5rem 1.25rem 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <nav class="navbar">
+        <a href="home.html" class="logo">STUDIO91</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="portfolio.html">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="portfolio-photography.html">Photography</a></li>
+                    <li><a href="portfolio-films.html">Films</a></li>
+                    <li><a href="portfolio-justus.html">Just Us</a></li>
+                </ul>
+            </li>
+            <li><a href="captured-stories.html">Captured Stories</a></li>
+            <li><a href="plans.html" class="active">Plans & Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero"
+        style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://placehold.co/1920x1080/7E746A/ffffff?text=Plans+%26+Pricing+Hero&font=Playfair+Display'); background-position: center; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container animate-on-scroll">
+            <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem; letter-spacing: 5px;">COLLECTIONS</p>
+            <h1 style="color: #fff; font-size: clamp(3rem, 6vw, 5rem); letter-spacing: 3px;">Plans & Pricing</h1>
+        </div>
+    </section>
+
+    <!-- Intro Quote Section -->
+    <section class="section-bg-white text-center" style="padding: 6rem 5%;">
+        <div class="container animate-on-scroll">
+            <p class="intro-text"
+                style="font-size: 0.9rem; color: var(--color-text-light); max-width: 600px; margin: 0 auto; line-height: 1.8; font-style: italic;">
+                "We are a collective of visual storytellers dedicated to preserving the raw, unscripted emotion of your
+                most cherished days. We don't just take photographs, we craft legacies."
+            </p>
+        </div>
+    </section>
+
+    <!-- Header Section (Details) -->
+    <header style="padding: 2rem 5% 0; text-align: center;">
+        <div class="container animate-on-scroll">
+            <p
+                style="color: var(--color-text-light); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">
+                2 days wedding photography Packages , Payment Terms : 50% Advance & 50% Wedding Day
+            </p>
+        </div>
+    </header>
+
+        <section id="plans-packages-section" style="padding: 0 0 8rem;">
+        <!-- Pre-Wedding Section -->
+        <div class="container text-center animate-on-scroll" style="margin-top: 4rem;" id="pre-wedding-packages">
+            <h2 style="color: var(--color-text-main); margin-bottom: 4rem;">Pre-Wedding Packages</h2>
+        </div>
+
+        <div class="packages-container">
+            <!-- Pre-Wedding P1 -->
+            <div class="package-card animate-on-scroll">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Pre-Wedding+P1&font=Playfair+Display"
+                        alt="Pre-Wedding 1" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Essential</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹40,000</span>
+                        <span class="price-sub">Package 1</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>1 Photographer</li>
+                    <li>1 Videographer</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>30 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Cinematic Teaser</li>
+                    <li>1 Highlight Film</li>
+                </ul>
+            </div>
+
+            <!-- Pre-Wedding P2 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Pre-Wedding+P2&font=Playfair+Display"
+                        alt="Pre-Wedding 2" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Premium</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹70,000</span>
+                        <span class="price-sub">Package 2</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>1 Photographer</li>
+                    <li>1 Videographer</li>
+                    <li>1 Drone Operator</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>50 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Instagram Reel</li>
+                    <li>1 Cinematic Highlight Film</li>
+                </ul>
+            </div>
+
+            <!-- Pre-Wedding P3 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Pre-Wedding+P3&font=Playfair+Display"
+                        alt="Pre-Wedding 3" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Signature</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹1,00,000</span>
+                        <span class="price-sub">Package 3</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>1 Photographer</li>
+                    <li>2 Videographers</li>
+                    <li>1 Drone Operator</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>50 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Instagram Reel</li>
+                    <li>1 Cinematic Highlight Film</li>
+                    <li>1 Cinematic Teaser</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="height: 1px; width: 100%; background: var(--color-bg-light); margin: 4rem 0;"></div>
+
+        <!-- Engagement Section -->
+        <div class="container text-center animate-on-scroll" id="engagement-packages">
+            <h2 style="color: var(--color-text-main); margin-bottom: 4rem;">Engagement Ceremony Packages</h2>
+        </div>
+
+        <div class="packages-container">
+            <!-- Engagement P1 -->
+            <div class="package-card animate-on-scroll">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Engagement+P1&font=Playfair+Display"
+                        alt="Engagement 1" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Essential</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹60,000</span>
+                        <span class="price-sub">Package 1</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>2 Photographers</li>
+                    <li>1 Videographer</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>80 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Cinematic Highlight Film</li>
+                    <li>1 Cinematic Teaser</li>
+                </ul>
+            </div>
+
+            <!-- Engagement P2 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Engagement+P2&font=Playfair+Display"
+                        alt="Engagement 2" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Premium</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹85,000</span>
+                        <span class="price-sub">Package 2</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>2 Photographers</li>
+                    <li>2 Videographers</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>100 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Instagram Reel</li>
+                    <li>1 Cinematic Highlight Film</li>
+                </ul>
+            </div>
+
+            <!-- Engagement P3 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Engagement+P3&font=Playfair+Display"
+                        alt="Engagement 3" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Signature</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹1,20,000</span>
+                        <span class="price-sub">Package 3</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>2 Photographers</li>
+                    <li>2 Videographers</li>
+                    <li>1 Drone Operator</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>100–120 Professionally Edited Photos</li>
+                    <li>1 Luxury Photo Album</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Instagram Reel</li>
+                    <li>1 Cinematic Highlight Film</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="height: 1px; width: 100%; background: var(--color-bg-light); margin: 4rem 0;"></div>
+
+        <!-- Wedding Section -->
+        <div class="container text-center animate-on-scroll" id="wedding-packages">
+            <h2 style="color: var(--color-text-main); margin-bottom: 4rem;">Wedding Packages</h2>
+        </div>
+
+        <div class="packages-container">
+            <!-- Wedding P1 -->
+            <div class="package-card animate-on-scroll">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/1a1a1a/ffffff?text=Wedding+P1&font=Playfair+Display"
+                        alt="Wedding 1" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Essential</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹90,000</span>
+                        <span class="price-sub">Package 1</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>2 Photographers</li>
+                    <li>1 Videographer</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>150 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Cinematic Highlight Film</li>
+                    <li>1 Cinematic Teaser</li>
+                </ul>
+            </div>
+
+            <!-- Wedding P2 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/1a1a1a/ffffff?text=Wedding+P2&font=Playfair+Display"
+                        alt="Wedding 2" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Premium</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹1,50,000</span>
+                        <span class="price-sub">Package 2</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>2 Photographers</li>
+                    <li>2 Videographers</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>200 Professionally Edited Photos</li>
+                    <li>1 Premium 50-Page Luxury Album</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Cinematic Highlight Film</li>
+                    <li>1 Cinematic Teaser</li>
+                    <li>1 Full-Length Wedding Film</li>
+                </ul>
+            </div>
+
+            <!-- Wedding P3 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/1a1a1a/ffffff?text=Wedding+P3&font=Playfair+Display"
+                        alt="Wedding 3" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Signature</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹2,00,000</span>
+                        <span class="price-sub">Package 3</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>3 Photographers</li>
+                    <li>2 Videographers</li>
+                    <li>1 Drone Operator</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>250 Professionally Edited Photos</li>
+                    <li>1 Luxury Photo Album</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Instagram Reel</li>
+                    <li>1 Cinematic Highlight Film</li>
+                    <li>1 Cinematic Teaser</li>
+                    <li>1 Full-Length Wedding Film</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="height: 1px; width: 100%; background: var(--color-bg-light); margin: 4rem 0;"></div>
+
+        <!-- Maternity Section -->
+        <div class="container text-center animate-on-scroll" id="maternity-portraiture">
+            <h2 style="color: var(--color-text-main); margin-bottom: 4rem;">Maternity Shoot</h2>
+        </div>
+
+        <div class="packages-container maternity-container">
+            <!-- Maternity P1 -->
+            <div class="package-card animate-on-scroll">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Maternity+P1&font=Playfair+Display"
+                        alt="Maternity 1" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Essential</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹40,000</span>
+                        <span class="price-sub">Package 1</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>1 Photographer</li>
+                    <li>1 Videographer</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>30 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Cinematic Teaser</li>
+                    <li>1 Highlight Film</li>
+                </ul>
+            </div>
+
+            <!-- Maternity P2 -->
+            <div class="package-card animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="package-img-wrapper">
+                    <img src="https://placehold.co/800x450/f9f9f9/333333?text=Maternity+P2&font=Playfair+Display"
+                        alt="Maternity 2" class="package-img">
+                </div>
+                <div class="package-header">
+                    <h2 class="package-title">Premium</h2>
+                    <div class="package-price">
+                        <span class="price-amount">₹70,000</span>
+                        <span class="price-sub">Package 2</span>
+                    </div>
+                </div>
+                <ul class="package-list">
+                    <li>1 Photographer</li>
+                    <li>1 Videographer</li>
+                    <li>1 Drone Operator</li>
+                </ul>
+                <span class="section-label">: Deliverables :</span>
+                <ul class="deliverables-list">
+                    <li>50 Professionally Edited Photos</li>
+                </ul>
+                <ul class="video-list">
+                    <li>1 Instagram Reel</li>
+                    <li>1 Cinematic Highlight Film</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer
+        style="background-color: var(--color-white); border-top: 1px solid var(--color-bg-light); padding: 4rem 5%; text-align: center;">
+        <a href="home.html" class="logo"
+            style="color: var(--color-text-main); font-size: 1.5rem; margin-bottom: 1rem; display: inline-block;">STUDIO91</a>
+        <p class="footer-description">
+            Studio91 is a premium wedding photography and cinematic filmmaking brand dedicated to capturing timeless love stories with elegance, emotion, and creativity. From intimate ceremonies to grand destination weddings, we transform beautiful moments into unforgettable memories that last forever.
+        </p>
+        <div class="footer-socials" style="margin-bottom: 1.5rem;">
+            <a href="https://www.instagram.com/studio91_djoshi/" target="_blank"
+                style="font-size: 1.5rem; color: var(--color-text-main); margin: 0 10px; transition: var(--transition-smooth);"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p style="color: var(--color-text-light);">&copy; 2026 Studio91. All Rights Reserved.</p>
+    </footer>
+
+    <div id="backToTop"
+        style="border-color: var(--color-bg-light); color: var(--color-text-main); background: var(--color-white);"><i
+            class="fas fa-arrow-up"></i></div>
+    <!-- 3D Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/content-data.js"></script>
+    <script src="js/images-data.js"></script>
+    <script src="js/videos-data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

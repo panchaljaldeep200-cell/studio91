@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Captured Stories | Studio91</title>
+    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: var(--color-white);
+        }
+
+        .stories-grid-section {
+            padding: 8rem 5%;
+            background-color: var(--color-white);
+        }
+
+        .story-card {
+            margin-bottom: 2rem;
+        }
+
+        .story-info {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .story-location {
+            font-family: var(--font-alt);
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .story-names {
+            font-family: var(--font-main);
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--color-text-main);
+            text-transform: uppercase;
+        }
+
+        .intro-main-title {
+            color: var(--color-text-main);
+        }
+
+        .intro-text {
+            color: var(--color-text-light) !important;
+        }
+
+        .section-bg-white {
+            background-color: var(--color-white) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="home.html" class="logo">STUDIO91</a>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="portfolio.html">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="portfolio-photography.html">Photography</a></li>
+                    <li><a href="portfolio-films.html">Films</a></li>
+                    <li><a href="portfolio-justus.html">Just Us</a></li>
+                </ul>
+            </li>
+            <li><a href="captured-stories.html" class="active">Captured Stories</a></li>
+            <li><a href="plans.html">Plans & Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fullscreen Hero Slider -->
+    <section class="hero-slider" id="stories-hero-slider" style="padding: 0;">
+
+        <!-- Story 1 -->
+        <div class="slide active"
+            style="background-image: url('https://placehold.co/1920x1080/D4C5B2/ffffff?text=ALEX+%26+EMMA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Tuscany, Italy</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Alex & Emma</h1>
+                <a href="stories/alex-emma.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/C9B99A/ffffff?text=NOAH+%26+OLIVIA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Malibu, California</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Noah & Olivia</h1>
+                <a href="stories/noah-olivia.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/E8DDD3/ffffff?text=LIAM+%26+AVA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Paris, France</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Liam & Ava</h1>
+                <a href="stories/liam-ava.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 4 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/D4C5B2/ffffff?text=WILLIAM+%26+SOPHIA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">London, UK</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">William & Sophia</h1>
+                <a href="stories/william-sophia.html" class="btn" style="border-color: #fff; color: #fff;">View
+                    Story</a>
+            </div>
+        </div>
+
+        <!-- Story 5 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/C9B99A/ffffff?text=JAMES+%26+ISABELLA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">New York, USA</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">James & Isabella</h1>
+                <a href="stories/james-isabella.html" class="btn" style="border-color: #fff; color: #fff;">View
+                    Story</a>
+            </div>
+        </div>
+
+        <!-- Story 6 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/E8DDD3/ffffff?text=BENJAMIN+%26+MIA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Santorini, Greece</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Benjamin & Mia</h1>
+                <a href="stories/benjamin-mia.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 7 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/D4C5B2/ffffff?text=LUCAS+%26+CHARLOTTE&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Cotswolds, UK</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Lucas & Charlotte</h1>
+                <a href="stories/lucas-charlotte.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 8 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/C9B99A/ffffff?text=HENRY+%26+AMELIA&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Swiss Alps, Switzerland</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Henry & Amelia</h1>
+                <a href="stories/henry-amelia.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 9 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/E8DDD3/ffffff?text=ALEXANDER+%26+HARPER&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Bali, Indonesia</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Alexander & Harper</h1>
+                <a href="stories/alexander-harper.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Story 10 -->
+        <div class="slide"
+            style="background-image: url('https://placehold.co/1920x1080/D4C5B2/ffffff?text=SEBASTIAN+%26+EVELYN&font=Playfair+Display');">
+            <div class="hero-content">
+                <p class="intro-eyebrow" style="color: #fff; margin-bottom: 1rem;">Kyoto, Japan</p>
+                <h1 class="tagline" style="margin-bottom: 2rem;">Sebastian & Evelyn</h1>
+                <a href="stories/sebastian-evelyn.html" class="btn" style="border-color: #fff; color: #fff;">View Story</a>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-arrow slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-arrow slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section-bg-white text-center">
+        <div class="container animate-on-scroll">
+            <p class="intro-eyebrow">A Collection of Love</p>
+            <h2 class="intro-main-title">Stories that live forever.</h2>
+            <p class="intro-text" style="font-size: 1.2rem; color: var(--color-text-light);">
+                "Every couple has a unique rhythm, a distinct language of love. These are the stories of the souls we've
+                had the honor to document."
+            </p>
+        </div>
+    </section>
+
+    <!-- Stories Grid -->
+    <section class="stories-grid-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="work-segments" id="stories-grid-container">
+
+                <!-- Story 1 -->
+                <a href="stories/alex-emma.html" class="segment-item animate-on-scroll" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/D4C5B2/ffffff?text=ALEX+%26+EMMA&font=Playfair+Display" alt="Alex & Emma" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Tuscany, Italy</p>
+                        <h3 class="story-names">Alex & Emma</h3>
+                    </div>
+                </a>
+
+                <!-- Story 2 -->
+                <a href="stories/noah-olivia.html" class="segment-item animate-on-scroll" style="transition-delay: 0.1s;" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=NOAH+%26+OLIVIA&font=Playfair+Display" alt="Noah & Olivia" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Malibu, California</p>
+                        <h3 class="story-names">Noah & Olivia</h3>
+                    </div>
+                </a>
+
+                <!-- Story 3 -->
+                <a href="stories/liam-ava.html" class="segment-item animate-on-scroll" style="transition-delay: 0.2s;" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/E8DDD3/ffffff?text=LIAM+%26+AVA&font=Playfair+Display" alt="Liam & Ava" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Paris, France</p>
+                        <h3 class="story-names">Liam & Ava</h3>
+                    </div>
+                </a>
+
+                <!-- Story 4 -->
+                <a href="stories/william-sophia.html" class="segment-item animate-on-scroll" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/D4C5B2/ffffff?text=WILLIAM+%26+SOPHIA&font=Playfair+Display" alt="William & Sophia" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">London, UK</p>
+                        <h3 class="story-names">William & Sophia</h3>
+                    </div>
+                </a>
+
+                <!-- Story 5 -->
+                <a href="stories/james-isabella.html" class="segment-item animate-on-scroll" style="transition-delay: 0.1s;" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=JAMES+%26+ISABELLA&font=Playfair+Display" alt="James & Isabella" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">New York, USA</p>
+                        <h3 class="story-names">James & Isabella</h3>
+                    </div>
+                </a>
+
+                <!-- Story 6 -->
+                <a href="stories/benjamin-mia.html" class="segment-item animate-on-scroll" style="transition-delay: 0.2s;" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/E8DDD3/ffffff?text=BENJAMIN+%26+MIA&font=Playfair+Display" alt="Benjamin & Mia" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Santorini, Greece</p>
+                        <h3 class="story-names">Benjamin & Mia</h3>
+                    </div>
+                </a>
+
+                <!-- Story 7 -->
+                <a href="stories/lucas-charlotte.html" class="segment-item animate-on-scroll" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/D4C5B2/ffffff?text=LUCAS+%26+CHARLOTTE&font=Playfair+Display" alt="Lucas & Charlotte" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Cotswolds, UK</p>
+                        <h3 class="story-names">Lucas & Charlotte</h3>
+                    </div>
+                </a>
+
+                <!-- Story 8 -->
+                <a href="stories/henry-amelia.html" class="segment-item animate-on-scroll" style="transition-delay: 0.1s;" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=HENRY+%26+AMELIA&font=Playfair+Display" alt="Henry & Amelia" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Swiss Alps, Switzerland</p>
+                        <h3 class="story-names">Henry & Amelia</h3>
+                    </div>
+                </a>
+
+                <!-- Story 9 -->
+                <a href="stories/alexander-harper.html" class="segment-item animate-on-scroll" style="transition-delay: 0.2s;" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/E8DDD3/ffffff?text=ALEXANDER+%26+HARPER&font=Playfair+Display" alt="Alexander & Harper" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Bali, Indonesia</p>
+                        <h3 class="story-names">Alexander & Harper</h3>
+                    </div>
+                </a>
+
+                <!-- Story 10 -->
+                <a href="stories/sebastian-evelyn.html" class="segment-item animate-on-scroll" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <img src="https://placehold.co/800x1000/D4C5B2/ffffff?text=SEBASTIAN+%26+EVELYN&font=Playfair+Display" alt="Sebastian & Evelyn" class="segment-img">
+                    <div class="story-info">
+                        <p class="story-location">Kyoto, Japan</p>
+                        <h3 class="story-names">Sebastian & Evelyn</h3>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: var(--color-white); border-top: 1px solid var(--color-bg-light);">
+        <a href="home.html" class="logo"
+            style="color: var(--color-text-main); font-size: 1.5rem; margin-bottom: 1rem; display: inline-block;">STUDIO91</a>
+        <p class="footer-description">
+            Studio91 is a premium wedding photography and cinematic filmmaking brand dedicated to capturing timeless love stories with elegance, emotion, and creativity. From intimate ceremonies to grand destination weddings, we transform beautiful moments into unforgettable memories that last forever.
+        </p>
+        <div class="footer-socials" style="margin-bottom: 1.5rem;">
+            <a href="https://www.instagram.com/studio91_djoshi/" target="_blank"
+                style="font-size: 1.5rem; color: var(--color-text-main); margin: 0 10px; transition: var(--transition-smooth);"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p style="color: var(--color-text-light);">&copy; 2026 Studio91. All Rights Reserved.</p>
+    </footer>
+
+    <div id="backToTop" style="border-color: var(--color-bg-light); color: var(--color-text-main); background: var(--color-white);"><i class="fas fa-arrow-up"></i></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/content-data.js"></script>
+    <script src="js/images-data.js"></script>
+    <script src="js/videos-data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio91 | Luxury Wedding Photography</title>
+    <meta name="description" content="Luxurious, authentic, and cinematic wedding photography by Studio91.">
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <!-- Font Awesome for arrows and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="nav-large">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">STUDIO91</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="portfolio.html">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="portfolio-photography.html">Photography</a></li>
+                    <li><a href="portfolio-films.html">Films</a></li>
+                    <li><a href="portfolio-justus.html">Just Us</a></li>
+                </ul>
+            </li>
+            <li><a href="captured-stories.html">Captured Stories</a></li>
+            <li><a href="plans.html">Plans & Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider" id="home-hero-slider" style="padding: 0;">
+        <div class="slide active" style="background-image: url('images/hero/hero-01.jpg');"></div>
+        <div class="slide" style="background-image: url('images/hero/hero-02.jpg');"></div>
+        <div class="slide" style="background-image: url('images/hero/hero-03.jpg');"></div>
+        <div class="slide" style="background-image: url('images/hero/hero-04.jpg');"></div>
+        <div class="slide" style="background-image: url('images/hero/hero-05.jpg');"></div>
+
+        <div class="hero-content">
+            <h1 class="tagline">TIMELESS LOVE STORIES BEAUTIFULLY CAPTURED.</h1>
+        </div>
+
+        <div class="slider-controls">
+            <button class="slider-arrow slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-arrow slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="home-intro-typography text-center">
+        <div class="container animate-on-scroll">
+            <p class="intro-eyebrow">STUDIO91 - SINCE 2014</p>
+            <h2 class="intro-main-title">Timeless love, told through light.</h2>
+            <p class="intro-sub">Luxury Wedding Photography • Cinematic Films • Destination Weddings • Storytelling</p>
+        </div>
+    </section>
+
+
+    <div style='height: 1px; width: 60px; background: #e8e8e8; margin: 4rem auto 0;'></div>
+
+    <!-- Our Philosophy -->
+    <section class="section-bg-light" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="philosophy-grid">
+                <div class="philosophy-content animate-on-scroll" style="padding-right: 2rem;">
+                    <p class="intro-eyebrow"
+                        style="color: #999; margin-bottom: 2rem; font-size: 0.8rem; letter-spacing: 4px;">OUR PHILOSOPHY
+                    </p>
+                    <h2 class="intro-main-title"
+                        style="color: #5c554e; font-size: clamp(3rem, 4vw, 4.5rem); margin-bottom: 3rem; line-height: 1.2;">
+                        We don't stage love.<br>We witness it.</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #777;">For us, photography is listening.
+                        It's the quiet art of being present enough to notice a trembling hand, a half-hidden smile, the
+                        way light falls on a grandmother's ring.</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 3.5rem; color: #777;">We craft frames that feel — images
+                        you'll return to not for how they look, but for how they make you remember.</p>
+                    <a href="about.html" class="btn">LEARN MORE</a>
+                </div>
+                <div class="philosophy-img-wrapper animate-on-scroll">
+                    <img src="images/hero/hero-01.jpg" alt="Our Philosophy" class="philosophy-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="section-bg-white" style="padding: 2rem 5%;">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Our Services</h2>
+            <div class="work-segments"
+                style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); align-items: start; margin-top: 4rem;">
+                <style>
+                    .service-card-wrapper {
+                        display: block;
+                        text-decoration: none;
+                        color: inherit;
+                        transition: transform 0.4s ease;
+                    }
+
+                    .service-card-wrapper:hover {
+                        transform: translateY(-8px);
+                    }
+
+                    .service-card-wrapper:hover .segment-img {
+                        transform: scale(1.05);
+                    }
+
+                    .service-card-text {
+                        text-align: center;
+                        padding: 3.5rem 1.5rem 0 1.5rem;
+                    }
+
+                    .service-card-text p {
+                        margin: 0;
+                        color: var(--color-text-light);
+                        font-size: 1.05rem;
+                        line-height: 1.7;
+                        font-family: var(--font-main);
+                    }
+
+                    .service-card-title {
+                        margin: 0 0 1.25rem 0;
+                        color: var(--color-text-main);
+                        font-size: 1.3rem;
+                        font-family: var(--font-alt);
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                </style>
+
+                <a href="portfolio-photography.html" class="service-card-wrapper animate-on-scroll">
+                    <div class="segment-item">
+                        <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=Engagement&font=Playfair+Display"
+                            alt="Engagement" class="segment-img">
+                        <div class="segment-overlay">
+                            <h3 class="segment-title">Engagement</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-card-text">
+                        <h4 class="service-card-title">Engagement</h4>
+                        <p>Celebrating the beginning of your forever.</p>
+                    </div>
+                </a>
+
+                <a href="portfolio-justus.html" class="service-card-wrapper animate-on-scroll"
+                    style="transition-delay: 0.1s;">
+                    <div class="segment-item">
+                        <img src="https://placehold.co/800x1000/E8DDD3/ffffff?text=Pre-Wedding&font=Playfair+Display"
+                            alt="Pre-Wedding" class="segment-img">
+                        <div class="segment-overlay">
+                            <h3 class="segment-title">Pre-Wedding</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-card-text">
+                        <h4 class="service-card-title">Pre-Wedding</h4>
+                        <p>A cinematic prelude to your celebration.</p>
+                    </div>
+                </a>
+
+                <a href="portfolio-photography.html" class="service-card-wrapper animate-on-scroll"
+                    style="transition-delay: 0.2s;">
+                    <div class="segment-item">
+                        <img src="https://placehold.co/800x1000/C9B99A/ffffff?text=Wedding&font=Playfair+Display"
+                            alt="Wedding" class="segment-img">
+                        <div class="segment-overlay">
+                            <h3 class="segment-title">Wedding</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-card-text">
+                        <h4 class="service-card-title">Wedding</h4>
+                        <p>Comprehensive coverage for your monumental day.</p>
+                    </div>
+                </a>
+
+                <a href="portfolio-justus.html" class="service-card-wrapper animate-on-scroll"
+                    style="transition-delay: 0.3s;">
+                    <div class="segment-item">
+                        <img src="https://placehold.co/800x1000/E8DDD3/ffffff?text=Maternity&font=Playfair+Display"
+                            alt="Maternity Portraiture" class="segment-img">
+                        <div class="segment-overlay">
+                            <h3 class="segment-title">Maternity</h3>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="service-card-text">
+                        <h4 class="service-card-title">Maternity Portraiture</h4>
+                        <p>Embracing the beautiful anticipation of life.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section (Home) -->
+    <section class="section-bg-light" style="padding-top: 2rem;">
+        <div class="container">
+            <h2 class="text-center animate-on-scroll">Our Plans</h2>
+            <div class="plans-grid" style="grid-template-columns: 1fr 1fr; margin-top: 5rem; gap: 4rem;">
+
+                <a href="plans.html#engagement-packages" class="plan-card animate-on-scroll"
+                    style="display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                    <h2 class="plan-title">Engagement Packages</h2>
+                    <p
+                        style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-text-light); font-family: var(--font-alt);">
+                        Celebrate the beginning of your forever with elegant engagement photography filled with genuine
+                        emotions and joyful moments.
+                    </p>
+                    <p style="margin-bottom: 0;">Starting from ₹15,000</p>
+                </a>
+
+                <a href="plans.html#pre-wedding-packages" class="plan-card animate-on-scroll"
+                    style="transition-delay: 0.1s; display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                    <h2 class="plan-title">Pre-Wedding Packages</h2>
+                    <p
+                        style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-text-light); font-family: var(--font-alt);">
+                        Romantic and cinematic pre-wedding experiences designed to beautifully showcase your love story
+                        and connection.
+                    </p>
+                    <p style="margin-bottom: 0;">Starting from ₹30,000</p>
+                </a>
+
+                <a href="plans.html#wedding-packages" class="plan-card animate-on-scroll"
+                    style="transition-delay: 0.2s; display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                    <h2 class="plan-title">Wedding Packages</h2>
+                    <p
+                        style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-text-light); font-family: var(--font-alt);">
+                        Luxury wedding photography and cinematic films crafted to capture every emotion, tradition, and
+                        unforgettable celebration.
+                    </p>
+                    <p style="margin-bottom: 0;">Starting from ₹2,00,000</p>
+                </a>
+
+                <a href="plans.html#maternity-portraiture" class="plan-card animate-on-scroll"
+                    style="transition-delay: 0.3s; display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                    <h2 class="plan-title">Maternity Portraiture</h2>
+                    <p
+                        style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-text-light); font-family: var(--font-alt);">
+                        Graceful and emotional maternity portraits celebrating love, motherhood, and life’s most
+                        beautiful journey.
+                    </p>
+                    <p style="margin-bottom: 0;">Starting from ₹12,000</p>
+                </a>
+            </div>
+            <div class="text-center animate-on-scroll" style="margin-top: 5rem;">
+                <a href="plans.html" class="btn">View Details & Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="section-bg-beige text-center">
+        <div class="container animate-on-scroll">
+            <p class="intro-text" style="font-style: italic;">
+                “A thing that you see in my pictures is that I was not afraid to fall in love with these people.”
+            </p>
+            <p style="margin-top: 1rem; text-transform: uppercase; letter-spacing: 2px;">— Annie Leibovitz</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="home.html" class="logo"
+            style="color: var(--color-text-main); font-size: 1.5rem; margin-bottom: 1rem; display: inline-block;">STUDIO91</a>
+        <p class="footer-description">
+            Studio91 is a premium wedding photography and cinematic filmmaking brand dedicated to capturing timeless
+            love stories with elegance, emotion, and creativity. From intimate ceremonies to grand destination weddings,
+            we transform beautiful moments into unforgettable memories that last forever.
+        </p>
+        <div class="footer-socials" style="margin-bottom: 1.5rem;">
+            <a href="https://www.instagram.com/studio91_djoshi/" target="_blank"
+                style="font-size: 1.5rem; color: var(--color-text-main); margin: 0 10px; transition: var(--transition-smooth);"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Studio91. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Back to top -->
+    <div id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- 3D Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/content-data.js"></script>
+    <script src="js/images-data.js"></script>
+    <script src="js/videos-data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

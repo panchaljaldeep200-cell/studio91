@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Contact | Studio91</title>
+    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="home.html" class="logo">STUDIO91</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="portfolio.html">Portfolio</a>
+                <ul class="dropdown-content">
+                    <li><a href="portfolio-photography.html">Photography</a></li>
+                    <li><a href="portfolio-films.html">Films</a></li>
+                    <li><a href="portfolio-justus.html">Just Us</a></li>
+                </ul>
+            </li>
+            <li><a href="captured-stories.html">Captured Stories</a></li>
+            <li><a href="plans.html">Plans & Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero"
+        style="background-image: url('images/contact/Bespoke-Elopements-in-Europe-Dolomites-056-1300x865.jpg'); padding: 0; background-position: center 30%;">
+        <h1>Contact</h1>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section-bg-white">
+        <div class="container animate-on-scroll">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="intro-main-title">Let’s Create Something Beautiful Together</h2>
+                <p style="margin-top: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--color-text-light);">
+                    Whether you’re planning an intimate ceremony or a grand destination wedding, Studio91 is here to capture every beautiful moment.
+                </p>
+                <p style="margin-top: 2rem; font-family: var(--font-alt); font-size: 0.9rem; letter-spacing: 1px; color: var(--color-text-light); text-transform: uppercase;">Fill out the form below to begin the conversation.</p>
+            </div>
+
+            <div class="contact-container">
+                <form action="https://formsubmit.co/thestudio91productions@gmail.com" method="POST">
+                    <!-- Added honey pot to prevent spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Optional: Disable captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <label for="name">Your name :</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address :</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number :</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" value="+91" placeholder="+91" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What type of session are you looking for? :</label>
+                        <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; cursor: pointer; color: var(--color-text-main);">
+                                <input type="checkbox" name="session_type[]" value="wedding" style="width: auto;"> Wedding
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; cursor: pointer; color: var(--color-text-main);">
+                                <input type="checkbox" name="session_type[]" value="engagement" style="width: auto;"> Engagement
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; cursor: pointer; color: var(--color-text-main);">
+                                <input type="checkbox" name="session_type[]" value="pre_wedding" style="width: auto;"> Pre-Wedding
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; cursor: pointer; color: var(--color-text-main);">
+                                <input type="checkbox" name="session_type[]" value="maternity" style="width: auto;"> Maternity
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="where">Where? :</label>
+                            <input type="text" id="where" name="where" class="form-control" placeholder="Venue or Location">
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 250px;">
+                            <label for="when">When? :</label>
+                            <input type="date" id="when" name="when" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 2rem; margin-bottom: 0;">
+                        <label style="margin-bottom: 0;">Choose required team members below:</label>
+                    </div>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label style="margin-bottom: 0.5rem; display: block; font-family: var(--font-alt);">Photographer (0-4) :</label>
+                            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_photographer" value="0" checked style="width: auto; margin: 0;"> 0</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_photographer" value="1" style="width: auto; margin: 0;"> 1</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_photographer" value="2" style="width: auto; margin: 0;"> 2</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_photographer" value="3" style="width: auto; margin: 0;"> 3</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_photographer" value="4" style="width: auto; margin: 0;"> 4</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label style="margin-bottom: 0.5rem; display: block; font-family: var(--font-alt);">Videographer (0-4) :</label>
+                            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_videographer" value="0" checked style="width: auto; margin: 0;"> 0</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_videographer" value="1" style="width: auto; margin: 0;"> 1</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_videographer" value="2" style="width: auto; margin: 0;"> 2</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_videographer" value="3" style="width: auto; margin: 0;"> 3</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_videographer" value="4" style="width: auto; margin: 0;"> 4</label>
+                            </div>
+                        </div>
+                        <div class="form-group" style="flex: 1; min-width: 150px;">
+                            <label style="margin-bottom: 0.5rem; display: block; font-family: var(--font-alt);">Drones (0-1) :</label>
+                            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_drone" value="0" checked style="width: auto; margin: 0;"> 0</label>
+                                <label style="font-weight: normal; display: flex; align-items: center; gap: 0.3rem; margin: 0; color: var(--color-text-main);"><input type="radio" name="req_drone" value="1" style="width: auto; margin: 0;"> 1</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" class="form-control"
+                            placeholder="Tell us what you have in mind..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="story">Your story! :</label>
+                        <textarea id="story" name="story" class="form-control"
+                            placeholder="How did you meet? What do you love doing together?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hear_about">How did you hear about us? :</label>
+                        <select id="hear_about" name="hear_about" class="form-control">
+                            <option value="" disabled selected>Select option</option>
+                            <option value="friend">From friend</option>
+                            <option value="social_media">Social Media</option>
+                            <option value="wedding_planner">Wedding Planner</option>
+                            <option value="google_search">Google Search</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recommended">If someone has recommended us, would love to know who! (We owe them a
+                            treat :) :</label>
+                        <input type="text" id="recommended" name="recommended" class="form-control">
+                    </div>
+
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <button type="submit" class="btn">Send Message</button>
+                        
+                        <p style="margin-top: 4rem; font-family: var(--font-alt); font-size: 1.1rem; color: var(--color-text-light);">
+                            If you prefer to write to us directly, please email at <a href="mailto:thestudio91productions@gmail.com" style="color: var(--color-text-main); font-weight: 600; text-decoration: underline;">thestudio91productions@gmail.com</a><br>
+                            or please call/WhatsApp us on <a href="tel:+919699255507" style="color: var(--color-text-main); font-weight: 600; text-decoration: underline;">+91 96992 55507</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Info -->
+    <footer class="section-bg-light" style="padding-top: 6rem;">
+        <div class="container animate-on-scroll">
+            <div class="footer-contact">
+                <div>
+                    <h3 style="font-size: 1.2rem; text-transform: uppercase;">Phone Number</h3>
+                    <p>+91 96992 55507</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.2rem; text-transform: uppercase;">Email</h3>
+                    <p>thestudio91productions@gmail.com</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.2rem; text-transform: uppercase;">Location</h3>
+                    <p>India</p>
+                </div>
+            </div>
+
+            <a href="home.html" class="logo"
+                style="color: var(--color-text-main); font-size: 1.5rem; margin: 3rem 0 1rem 0; display: inline-block;">STUDIO91</a>
+            <p class="footer-description">
+                Studio91 is a premium wedding photography and cinematic filmmaking brand dedicated to capturing timeless love stories with elegance, emotion, and creativity. From intimate ceremonies to grand destination weddings, we transform beautiful moments into unforgettable memories that last forever.
+            </p>
+            <div class="footer-socials" style="margin-bottom: 1.5rem;">
+            <a href="https://www.instagram.com/studio91_djoshi/" target="_blank"
+                style="font-size: 1.5rem; color: var(--color-text-main); margin: 0 10px; transition: var(--transition-smooth);"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Studio91. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+    <script src="js/settings.js"></script>
+    <script src="js/content-data.js"></script>
+    <script src="js/images-data.js"></script>
+    <script src="js/videos-data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
